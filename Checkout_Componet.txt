@@ -1,0 +1,15 @@
+// src/components/Checkout.js
+
+import React from 'react';
+
+const Checkout = ({ totalPrice }) => {
+  const handleCheckout = () => {
+    alert(`Checkout successful! Total: $${totalPrice}`);
+  };
+
+  return (
+    <button onClick={handleCheckout}>Checkout</button>
+  );
+};
+
+export default Checkout;

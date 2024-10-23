@@ -1,0 +1,20 @@
+// src/components/Cart.js
+
+import React from 'react';
+
+const Cart = ({ cart, removeFromCart, totalItems, totalPrice }) => {
+  return (
+    <div className="cart">
+      <h2>Shopping Cart ({totalItems} items)</h2>
+      {cart.map(item => (
+        <div key={item.id}>
+          <h4>{item.title}</h4>
+          <button onClick={() => removeFromCart(item.id)}>Remove</button>
+        </div>
+      ))}
+      <h3>Total Price: ${totalPrice}</h3>
+    </div>
+  );
+};
+
+export default Cart;
